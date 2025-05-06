@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio di Andrea Fogu, graphic designer e studente all'Accademia di Belle Arti">
+    <meta name="keywords" content="design, graphic design, typography, portfolio, Andrea Fogu">
+    <title>Portfolio - Andrea Fogu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Stili specifici per centrare il modulo di contatto */
+        .contact-form .contact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 0;
+        }
+        
+        .contact-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        #contactForm {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #000;
+            outline: none;
+        }
+        
+        .form-checkbox {
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .form-checkbox input {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .submit-btn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-self: center;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 1rem;
+        }
+        
+        .submit-btn:hover {
+            background-color: #333;
+        }
+        
+        .cross-pattern.bottom {
+            margin-top: 2rem;
+        }
+    </style>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio di Andrea Fogu, graphic designer e studente all'Accademia di Belle Arti">
+        <meta name="keywords" content="design, graphic design, typography, portfolio, Andrea Fogu">
+        <title>Portfolio - Andrea Fogu</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            /* Stili specifici per centrare il modulo di contatto */
+            .contact-form .contact-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 3rem 0;
+            }
+            
+            .contact-header {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            
+            .form-container {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 2rem;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            #contactForm {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .form-group label {
+                font-weight: 600;
+                font-size: 1rem;
+            }
+            
+            .form-group input,
+            .form-group textarea {
+                padding: 0.8rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 1rem;
+                transition: border 0.3s ease;
+            }
+            
+            .form-group input:focus,
+            .form-group textarea:focus {
+                border-color: #000;
+                outline: none;
+            }
+            
+            .form-checkbox {
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .form-checkbox input {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .submit-btn {
+                background-color: #000;
+                color: #fff;
+                border: none;
+                padding: 1rem;
+                font-size: 1rem;
+                font-weight: 600;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                align-self: center;
+                width: 100%;
+                max-width: 300px;
+                margin-top: 1rem;
+            }
+            
+            .submit-btn:hover {
+                background-color: #333;
+            }
+            
+            .cross-pattern.bottom {
+                margin-top: 2rem;
+            }
+            
+            /* AGGIUNTI STILI PER L'OVERLAY */
+            .grid-item {
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            
+            .grid-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+            
+            .grid-item .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            
+            .grid-item:hover .overlay {
+                opacity: 1;
+            }
+            
+            .grid-item:hover img {
+                transform: scale(1.05);
+            }
+            
+            .overlay span {
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 600;
+                text-align: center;
+                padding: 10px 20px;
+                border: 2px solid #fff;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+            
+            .overlay span:hover {
+                background-color: #fff;
+                color: #000;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <!-- Sezione Header -->
+        <section class="slide header" id="home">
+            <div class="header-content">
+                <div class="cross-pattern">
+                    <div class="crosses">x x x x x x</div>
+                    <div class="crosses">x x x x x x</div>
+                </div>
+                <h1>PORTFOLIO</h1>
+                <div class="year-line">
+                    <span>2022</span>
+                    <hr>
+                    <span>2025</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione About -->
+        <section class="slide about" id="about">
+            <div class="about-content">
+                <div class="browser-window">
+                    <div class="browser-top">
+                        <div class="browser-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="browser-address">ABOUT ME</div>
+                    </div>
+                    <div class="browser-content">
+                        <img src="foto profilo.jpeg" alt="Andrea Fogu" class="profile-img">
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h2>ABOUT ME<br></h2>
+                    <div class="cross-pattern right">
+                        <div class="crosses">x x x x x x</div>
+                        <div class="crosses">x x x x x x</div>
+                    </div>
+                    <p>Ciao! Mi chiamo Andrea Fogu, ho 23 anni e sono attualmente iscritto all'Accademia di Belle Arti. La mia passione per l'arte e la creatività mi ha spinto a intraprendere questo percorso di studi, dove continuo a esplorare e sviluppare il mio talento.
+
+                        Sono sempre alla ricerca di nuove ispirazioni e opportunità di crescita, pronto a condividere le mie passioni e idee con chiunque voglia unirsi a me in questo viaggio.</p>
+                    
+                    <div class="contact">
+                        <h3>Contact me</h3>
+                        <hr>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>3332624517</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-instagram"></i>
+                                <span>@andreafoguu_</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>foguandrea@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Google Maps -->
+        <section class="slide maps" id="maps">
+            <div class="maps-content">
+                <div class="maps-header">
+                    <h2>LA MIA POSIZIONE</h2>
+                </div>
+                <div class="maps-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.591827060913!2d8.89303277576292!3d45.51829472982849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786f25f74706f8f%3A0x1780ccfda3f9d022!2sVia%20Giordano%20Bruno%2C%205%2C%2020003%20Casorezzo%20MI!5e0!3m2!1sit!2sit!4v1744010426500!5m2!1sit!2sit" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Skills -->
+        <section class="slide skills" id="skills">
+            <div class="skills-content">
+                <div class="skills-header">
+                    <h2 class="script-text">My</h2>
+                    <h2>SKILLS</h2>
+                </div>
+                
+                <div class="skills-list">
+                    <ul>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Canva</li>
+                        <li>Procreate</li>
+                    </ul>
+                </div>
+                
+                <div class="skills-illustration">
+                    <img src="personal logo.png" alt="Skills Illustration">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Graphic Designer con anteprima multipla -->
+        <section class="slide portfolio" id="graphic">
+            <div class="portfolio-content">
+                <div class="portfolio-header">
+                    <h2 class="script-text">Graphic</h2>
+                    <h2>DESIGNER</h2>
+                </div>
+                
+                <div class="portfolio-grid-container">
+                    <div class="slider-arrow left-arrow">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    
+                    <div class="portfolio-grid-slider">
+                        <!-- Prima pagina di lavori -->
+                        <div class="grid-container active">
+                            <div class="grid-item" data-id="graphic1">
+                                <img src="carta yoshi.png" alt="Design">
+                                <div class="overlay">
+                                    <span>Visualizza dettagli</span>
+                                </div>
+                            </div>
+                            <div class="grid-item" data-id="graphic2">
+                                <img src="infografica.png" alt="Design">
+                                <div class="overlay">
+                                    <span>Visualizza dettagli</span>
+                                </div>
+                            </div>
+                            <div class="grid-item" data-id="graphic3">
+                                <img src="render simpson.png" alt="Design">
+                                <div class="overlay">
+                                    <span>Visualizza dettagli</span>
+                                </div>
+                            </div>
+                            <div class="grid-item" data-id="graphic4">
+                                <img src="advaccademia.png" alt="Design">
+                                <div class="overlay">
+                                    <span>Visualizza dettagli</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Seconda pagina di lavori (nuova) -->
+                        <div class="grid-container">
+                            <div class="grid-item" data-id="graphic5">
+                                <img src="etichetta vino.png" alt="Design">
+                                <div class="overlay">
+                                    <span>Visualizza dettagli</span>
+                                </div>
+                            </div>
+                            <div class="grid-item" data-id="graphic6">
+                                <img src="profilo.png" alt="Design">
+                                <div class="overlay">
+                                    <span>Visualizza dettagli</span>
+                                </div>
+                            </div>
+                            <div class="grid-item" data-id="graphic7">
+                                <img src="progetto7.png" alt="Design">
+                                <div class="overlay">
+                                    <span>Visualizza dettagli</span>
+                                </div>
+                            </div>
+                            <div class="grid-item" data-id="graphic8">
+                                <img src="progetto8.png" alt="Design">
+                                <div class="overlay">
+                                    <span>Visualizza dettagli</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-arrow right-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    
+                    <div class="slider-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Contattami (ex Typography) - Centrata -->
+        <section class="slide contact-form" id="contact">
+            <div class="contact-content">
+                <div class="contact-header">
+                    <h2 class="script-text">Contact</h2>
+                    <h2>ME</h2>
+                </div>
+                
+                <div class="form-container">
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nome e Cognome</label>
+                            <input type="text" id="name" name="name" placeholder="Es. Mario Rossi" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Es. mario.rossi@email.it" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefono</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Es. 3331234567">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Oggetto</label>
+                            <input type="text" id="subject" name="subject" placeholder="Es. Richiesta collaborazione" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Messaggio</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Accetto la Privacy Policy</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Invia Messaggio</button>
+                    </form>
+                </div>
+                
+                <div class="cross-pattern bottom">
+                    <div class="crosses">x x x x x x</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal per i dettagli dei progetti (comune per tutte le sezioni) -->
+        
+    </style>
+</head>
+<body>
+    <!-- Resto del codice HTML rimane lo stesso... -->
+    
+    <!-- Modal per i dettagli dei progetti -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h3 class="modal-title">Titolo Progetto</h3>
+                <div class="modal-image">
+                    <img src="" alt="Project Detail">
+                </div>
+                <div class="modal-description">
+                    <p>Descrizione del progetto...</p>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Data:</span>
+                            <span class="detail-value date-value">2023</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Software:</span>
+                            <span class="detail-value software-value">Adobe Illustrator</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Cliente:</span>
+                            <span class="detail-value client-value">Personale</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Sezione Thank You -->
+        <section class="slide thank-you" id="thank-you">
+            <div class="thank-you-content">
+                <div class="cross-pattern center">
+                    <div class="crosses">x x x x x x</div>
+                </div>
+                <h2>THANK YOU</h2>
+                <div class="year-bottom">2022 - 2025</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Menu di navigazione -->
+    <nav class="navbar">
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#maps">Mappa</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#graphic">Graphic</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- JavaScript per la funzionalità del sito -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Funzionalità per il menu di navigazione
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            navToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Chiudi il menu quando si clicca su un link
+            document.querySelectorAll('.nav-menu a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+            
+            // Funzionalità per gli slider del portfolio
+            document.querySelectorAll('.portfolio-grid-container').forEach(function(container) {
+                const slider = container.querySelector('.portfolio-grid-slider');
+                const grids = slider.querySelectorAll('.grid-container');
+                const dots = container.querySelectorAll('.slider-dots .dot');
+                const leftArrow = container.querySelector('.left-arrow');
+                const rightArrow = container.querySelector('.right-arrow');
+                let currentIndex = 0;
+                
+                // Funzione per mostrare un grid specifico
+                function showGrid(index) {
+                    if (index < 0) index = grids.length - 1;
+                    if (index >= grids.length) index = 0;
+                    
+                    grids.forEach(grid => grid.classList.remove('active'));
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    
+                    grids[index].classList.add('active');
+                    if (dots[index]) dots[index].classList.add('active');
+                    
+                    currentIndex = index;
+                }
+                
+                // Navigazione con le frecce
+                if (leftArrow) {
+                    leftArrow.addEventListener('click', function() {
+                        showGrid(currentIndex - 1);
+                    });
+                }
+                
+                if (rightArrow) {
+                    rightArrow.addEventListener('click', function() {
+                        showGrid(currentIndex + 1);
+                    });
+                }
+                
+                // Navigazione con i punti
+                dots.forEach(function(dot, index) {
+                    dot.addEventListener('click', function() {
+                        showGrid(index);
+                    });
+                });
+                
+                // Inizializza il primo grid come attivo
+                showGrid(0);
+            });
+            
+            // Funzionalità per i modal dei progetti
+            const modal = document.getElementById('project-modal');
+            const closeModal = document.querySelector('.close-modal');
+            const modalTitle = document.querySelector('.modal-title');
+            const modalImage = document.querySelector('.modal-image img');
+            const modalDescription = document.querySelector('.modal-description p');
+            const modalDate = document.querySelector('.detail-value:nth-of-type(1)');
+            const modalSoftware = document.querySelector('.detail-value:nth-of-type(2)');
+            const modalClient = document.querySelector('.detail-value:nth-of-type(3)');
+            
+            // Database dei progetti (da popolare con i dati reali)
+            const projectsData = {
+                // Graphic projects
+                'graphic1': {
+                    title: 'Carta Yoshi',
+                    image: 'carta yoshi.png',
+                    description: 'Tarocchoo con tematica, Mario Bros',
+                    date: '2023',
+                    software: 'Adobe Illustrator',
+                    client: 'Personale'
+                },
+                'graphic2': {
+                    title: 'Infografica',
+                    image: 'infografica.png',
+                    description: 'Descrizione dell\'infografica...',
+                    date: '2023',
+                    software: 'Adobe Illustrator',
+                    client: 'Personale'
+                },
+                // Aggiungi altri progetti qui...
+            };
+            
+            // Aggiungi event listener per aprire il modal
+            document.querySelectorAll('.grid-item').forEach(function(item) {
+                item.addEventListener('click', function() {
+                    const projectId = this.getAttribute('data-id');
+                    const project = projectsData[projectId];
+                    
+                    if (project) {
+                        modalTitle.textContent = project.title;
+                        modalImage.src = project.image;
+                        modalDescription.textContent = project.description;
+                        modalDate.textContent = project.date;
+                        modalSoftware.textContent = project.software;
+                        modalClient.textContent = project.client;
+                        
+                        modal.classList.add('show');
+                    }
+                });
+            });
+            
+            // Chiudi il modal quando si clicca sulla X
+            if (closeModal) {
+                closeModal.addEventListener('click', function() {
+                    modal.classList.remove('show');
+                });
+            }
+            
+            // Chiudi il modal quando si clicca fuori dal contenuto
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.classList.remove('show');
+                }
+            });
+            
+            // Gestione del form di contatto
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    // Qui puoi aggiungere il codice per inviare il form
+                    // Per esempio, usando fetch o XMLHttpRequest
+                    
+                    alert('Grazie per avermi contattato! Ti risponderò al più presto.');
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
